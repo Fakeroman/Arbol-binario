@@ -113,6 +113,39 @@ class ArbolBinario {
     c+=r.dato;
     return c;
   }
+    busqueda(search){
+
+    if(this.raiz==null){
+      return " ";
+    }
+   
+    else{
+    return this.busquedaB(this.raiz,search);
+    }
+  }
+  busquedaB(raiz,search){
+if (search==raiz.dato) {
+  return "Si esta"
+}
+else if (search<raiz.dato) {
+  if(raiz.hder==null){
+    return "No esta"
+  }
+  else{
+    this.busquedaB(raiz.hder,search)
+  }
+  
+}
+else{
+  if(raiz.hizq==null){
+    return "No esta"
+  }
+  else{
+    this.busquedaB(raiz.hizq,search)
+  }
+  
+}
+  }
 
  
 }
