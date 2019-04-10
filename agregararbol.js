@@ -1,6 +1,6 @@
 var arbol=new ArbolBinario();
 
-function f1() {
+function añadirNodo() {
     var nodo=parseInt(document.getElementById('nodo').value);
     var nuevoNodo= new Nodo(nodo);
     arbol.agregar(nuevoNodo);
@@ -19,15 +19,15 @@ function preOr(){
     document.getElementById('postO').innerHTML=post;
  }
 
- function busque() {
+ function busqueda() {
    var search=parseInt(document.getElementById('busqueda').value);
    var busqueda = arbol.busqueda(search);
    document.getElementById('SE').innerHTML=busqueda;
  }
 
 
-document.getElementById('btnAgregar').addEventListener('click',f1);
+document.getElementById('btnAgregar').addEventListener('click',añadirNodo);
 document.getElementById('btnIn').addEventListener('click',inOr);
 document.getElementById('btnPre').addEventListener('click',preOr);
 document.getElementById('btnPost').addEventListener('click',postOr);
-document.getElementById('btnB').addEventListener('click',busque)
+document.getElementById('btnB').addEventListener('click',busqueda)
